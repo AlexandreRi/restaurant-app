@@ -1,0 +1,15 @@
+<p>Now is <%= Time.now %><p>
+
+<h2>Meet our team</h2>
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member %></li>
+  <% end %>
+</ol>
+
+<form action="/contact" method="get">
+  <input type="text" name="member" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<%= link_to "Back to homepage", root_path %>
